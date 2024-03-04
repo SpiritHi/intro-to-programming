@@ -1,6 +1,6 @@
 # Resources
 
-A place for links, etc. 
+A place for links, etc.  
 
 ## Markdown Reference
 
