@@ -1,5 +1,0 @@
-@TodosApi_HostAddress = http://localhost:1337
-
-
-GET {{TodosApi_HostAddress}}/status
-Accept: application/json
