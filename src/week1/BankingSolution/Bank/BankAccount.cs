@@ -4,13 +4,19 @@
 
 namespace Bank;
 
-public class BankAccount
+public class BankAccount(ICalculateBonusesForDeposits bonusCalculator)
 {
+
     private decimal _currentBalance = 5000M;
     public void Deposit(decimal amountToDeposit)
     {
+
+
         GuardTransactionAmount(amountToDeposit);
-        _currentBalance += amountToDeposit;
+
+        // WTCAWHH (variation of the Write the Code You Wish You Had)
+        decimal bonus = bonusCalculator.CalculateDepositBonusFor(_currentBalance, amountToDeposit);
+        _currentBalance += amountToDeposit + bonus;
     }
 
 
